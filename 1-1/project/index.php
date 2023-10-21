@@ -6,6 +6,8 @@ spl_autoload_register(function (string $className) {
 $route = $_GET['route'] ?? '';
 $routes = require __DIR__ . '/../source/routes.php';
 
+var_dump($route);
+
 $isRouteFound = false;
 foreach ($routes as $pattern => $controllerAndAction) {
     preg_match($pattern, $route, $matches);
